@@ -1,0 +1,75 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Serif Bengali', serif;
+  background-color: #001d3d;
+  color: white;
+  overflow: hidden;
+}
+
+.poem-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 10px #ffffff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ocean {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, #004e92, #001d3d);
+}
+
+.waves {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: wave-animation 8s infinite linear;
+}
+
+@keyframes wave-animation {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.poem {
+  z-index: 2;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.poem h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffde59;
+}
+
+.poem p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
